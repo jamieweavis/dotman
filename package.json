@@ -1,0 +1,8 @@
+{
+  "name": "dotman",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/jamieweavis/dotman.git",
+  "author": "Jamie Weavis <jamie.weavis@gmail.com>",
+  "license": "MIT"
+}
