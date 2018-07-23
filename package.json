@@ -1,8 +1,62 @@
 {
   "name": "dotman",
+  "description": "Simplistic dotfile manager",
   "version": "0.1.0",
-  "main": "index.js",
-  "repository": "https://github.com/jamieweavis/dotman.git",
   "author": "Jamie Weavis <jamie.weavis@gmail.com>",
-  "license": "MIT"
+  "bin": {
+    "dotman": "./bin/run"
+  },
+  "bugs": "https://github.com/jamieweavis/dotman/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@types/node": "^10",
+    "globby": "^8",
+    "tslint": "^5",
+    "tslint-config-airbnb": "^5.9.2",
+    "typescript": "^2.9"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/jamieweavis/dotman",
+  "keywords": [
+    "dotfile",
+    "dotfile-management",
+    "dotfile-manager",
+    "dotfiles",
+    "dotfiles-manager",
+    "dotman"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "dotman",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "https://github.com/jamieweavis/dotman.git",
+  "scripts": {
+    "dev": "tsc -w",
+    "postpack": "rm -f oclif.manifest.json npm-shrinkwrap.json",
+    "posttest": "tsc -p . --noEmit && tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc && oclif-dev manifest && oclif-dev readme && npm shrinkwrap",
+    "prepare": "rm -rf lib && tsc",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
 }
