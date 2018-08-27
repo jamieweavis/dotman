@@ -11,10 +11,14 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
+    "cli-ux": "^4.8.0",
+    "conf": "^2.0.0",
+    "signale": "^1.2.1",
     "tslib": "^1"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
+    "@types/conf": "^1.4.0",
     "@types/node": "^10",
     "globby": "^8",
     "tslint": "^5",
