@@ -19,6 +19,7 @@
     "globby": "^8",
     "tslint": "^5",
     "tslint-config-airbnb": "^5.9.2",
+    "tslint-config-prettier": "^1.15.0",
     "typescript": "^2.9"
   },
   "engines": {
