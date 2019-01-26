@@ -15,7 +15,7 @@ class Load extends Command {
       process.exit();
     }
 
-    const dotfileRepoDir = config.get('path');
+    const dotfileRepoDir = config.get('dotfileRepoDir');
     const dotfileManager = new DotfileManager(dotfileRepoDir);
 
     dotfileManager.load();
